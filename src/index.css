@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: white;
+    color: #000;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-size: 1rem;
+  }
+  
+  input,
+  textarea,
+  button,
+  select {
+    font: inherit;
+    margin-bottom: 1em;
+  }
+  
+  .custom-modal {
+    border-top: 5px solid rgb(34, 0, 255);
+  }
+  
+  .custom-modal-header {
+    border-top: 5px solid rgb(0, 17, 255);
+  }
+  
+  
+  header {
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between ;
+    align-items:  center;
+    background-color: purple;
+    color: rgb(238, 211, 211);
+    position: sticky;
+    top: 0;
+    height: 60px;
+    
+  }
+ 
+  .navbar-title {
+    color: rgb(239, 129, 251);
+  }
+  .navbar-title:hover {
+    color: rgb(246, 234, 22);
+  }  
+  .nav-tabs .nav-link {
+    background-color:rgb(232, 124, 232);
+    color:#f1d8d8;
+    margin: 0 5px 0 0;   
+  }
+  .nav-tabs .nav-link:hover {
+    background-color:rgb(210, 24, 210);
+    color:#f4f811;    
+  }
+  .nav-tabs .nav-link.active {
+    background-color:rgb(128,0, 128);
+  }
+  .nav-link.active {
+    color: #f5eb62 !important;
+  }
+  .navbar-toggler-icon {
+    display: block;
+    width: 24px;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 2px;
+    margin-top :3px;
+     
+  }  
+  .navbar-toggler-icon::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 4px;
+    background-color: yellow;
+    border-radius:2px; 
+     margin-top :4px; 
+     transform : translateY(5px);
+  }  
+  .navbar-toggler-icon::after {
+   content : ""; 
+   display : block; 
+   width: 24px; 
+   height: 4px; 
+   background-color: yellow; 
+   border-radius: 2px;  
+   margin-top: 4px;  
+   transform : translateY(5px);
+  }
+  .btn-custom {
+    background-color: rgb(227, 150, 235);
+    border: none;
+  }
+  @media (max-width: 768px) {
+    .nav-pills {
+      flex-direction: column;
+    }
+  }
+  .btn-custom:hover {
+    background-color: red;
+  }
+  li {
+    list-style-type: none;
+  }   
+  
+  main {
+    max-width: 1200px;
+    margin: auto;
+    margin: top 0;
+  }
+  
+  section {
+    margin-top: 1em;
+  }
+  
+  article {
+    margin: 0.5em;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 1em;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    margin: 0.5em 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    height: 200px;
+  }
+  
+  .postCredit {
+    font-size: 1rem;
+  }
+  
+  .postCredit a, 
+  .postCredit a:visited {
+    margin-right: 0.5rem;
+    color: black;
+  }
+  
+  .postCredit a:hover, 
+  .postCredit a:focus {
+    color: hsla(0, 0%, 0%, 0.75);
+  }
+  
+  .excerpt {
+    font-style: italic;
+  }
+  
+  .reactionButton {
+    margin: 0 0.25em 0 0;
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+  }
+  
+  .deleteButton {
+    background-color: palevioletred;
+    color: white;
+  }
+  
+  .styled-table-container {
+    position: relative;
+  }
+  
+  .styled-table {
+    border-collapse: collapse;
+    margin-top:0;
+    font-size: 0.9em;
+    width: 100%;
+    overflow-y: scroll;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   
+    }
+  
+  .styled-table thead tr th {
+    background-color: #009879;
+    color: #f3f3f3;
+    text-align: center;
+    position: sticky;
+    top:0;
+    
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 5px 8px;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  .styled-table-wrapper {
+    position: relative;
+    top: 2px;
+  }
+  /* Add this to your index.css file */
+
+  .sidebar-container {
+    direction: rtl; /* set the direction to rtl */
+   
+  }
+
+.sidebar {
+  
+  height: 100vh; 
+  margin-top: 60px;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.open {
+  transform: translateX(0); /* move the sidebar to the right when it is open */
+  visibility: visible;
+}
+.close {
+  visibility: hidden;
+}
+.main-content {
+  flex: 1; /* make the main content fill the remaining space */
+  padding: 20px; /* add some padding to the main content */
+}
+
+.toggle-button {
+  margin: 10px; /* add some margin to the toggle button */
+}
+.container {
+  display: flex;
+}
+.main {
+  flex: 2;
+  background-color: white;
+}
+.sidebar {
+  flex: 1;
+  background-color: purple;
+  color: white;
+}
+*{
+  box-sizing: border-box;
+}
